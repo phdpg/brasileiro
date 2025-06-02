@@ -1,0 +1,66 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodadas do Brasileirão</title>
+  <link rel="stylesheet" href="jogos.css">
+</head>
+<body>
+    <header class="site-header">
+      <img src="./img/logo.png" alt="Logo" class="img_topo">
+      <h1>Rodadas do Brasileirão</h1>
+      <ul class="nav-menu">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="tabela.html">Classificação</a></li>
+        <li><a href="estatisticas.html">Estatísticas</a></li>
+      </ul>
+    </header>
+  
+    <main class="rodadas-container">
+      <!-- Rodadas serão inseridas aqui -->
+    </main>
+  
+    <footer class="site-footer">
+      <p>&copy; 2025 Campeonato Brasileiro Série A</p>
+    </footer>
+  
+    <script>
+  fetch('jogos.json')
+    .then(response => response.json())
+    .then(data => {
+      const rodadas = data.rodadas;
+      const container = document.querySelector(".rodadas-container");
+
+      // Percorre todas as rodadas existentes no JSON
+      Object.keys(rodadas).forEach((rodadaKey, index) => {
+        const rodada = document.createElement("section");
+        rodada.classList.add("rodada");
+        rodada.innerHTML = `<h2>Rodada ${index + 1}</h2><ul class="jogos"></ul>`;
+        const ul = rodada.querySelector("ul");
+
+        rodadas[rodadaKey].forEach(jogo => {
+          const li = document.createElement("li");
+
+          const placar =
+            jogo.placar_casa !== undefined && jogo.placar_fora !== undefined
+              ? `${jogo.placar_casa} <img src="img/${jogo.casa}" alt=""> x <img src="img/${jogo.fora}" alt=""> ${jogo.placar_fora}`
+              : `<img src="img/${jogo.casa}" alt=""> x <img src="img/${jogo.fora}" alt="">`;
+
+          li.innerHTML = placar;
+          ul.appendChild(li);
+        });
+
+        container.appendChild(rodada);
+      });
+    })
+    .catch(error => {
+      console.error("Erro ao carregar os dados das rodadas:", error);
+    });
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,151 @@
+/* Reset e base */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #171b5f;
+    color: #333;
+  }
+  
+  /* Header */
+  .site-header {
+    background-color: #171b5f;
+    color: #c8fe08;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .img_topo img {
+    height: 100px;
+    width: auto;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto 0;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+  }
+  
+  .nav-menu a {
+    color: #c8fe08;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+  
+  .img_fundo {
+    background-image: url(./img/fundo.png);
+    background-size: cover;
+    background-position: center;
+    padding: 40px 0;
+  }
+  
+  /* Hero Section */
+  .home-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .hero {
+    max-width: 600px;
+    background-color: #c8fe08;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+  
+  .hero h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #171b5f;
+  }
+  
+  .hero p {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #444;
+  }
+  
+  .btn {
+    background-color: #171b5f;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #0f133e;
+  }
+  
+  /* Footer */
+  .site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #171b5f;
+    color: white;
+    font-size: 14px;
+  }
+  
+  /* Rodadas Grid */
+  main {
+    padding: 40px;
+  }
+  
+  .rodadas-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .rodada {
+    background-color: #c8fe08;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    min-height: 200px;
+    text-align: center;
+  }
+  
+  .rodada h2 {
+    color: #171b5f;
+    margin-bottom: 10px;
+  }
+  
+  .jogos {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .jogos li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .jogos li img {
+    height: 20px;
+    margin: 0 5px;
+  }

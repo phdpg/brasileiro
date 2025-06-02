@@ -1,0 +1,106 @@
+/* Estatísticas - estilo integrado ao site */
+.estatisticas-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #c8fe08;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .estatisticas-container h2 {
+    font-size: 35px;
+    color: #c8fe08;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+    border-bottom: 10px solid #171b5f;
+    padding-bottom: 5px;
+    padding-top: 10px;
+    background-color: #171b5f;
+  }
+  
+  .estatistica {
+    margin-bottom: 24px;
+  }
+  
+  .estatistica h3 {
+    font-size: 30px;
+    color: #171b5f;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 5px solid #c8fe08;
+  }
+  
+  .estatistica p,
+  .estatistica ul {
+    font-size: 16px;
+    color: #333;
+    padding-left: 20px;
+  }
+  
+  .estatistica ul {
+    list-style: disc;
+    margin-top: 5px;
+  }
+  
+  .estatistica li {
+    margin-bottom: 6px;
+  }
+  
+  .estatistica strong {
+    color: #171b5f;
+  }
+  
+  img{
+    width: 25px;
+  }
+
+  .fundo{
+    background-color: #171b5f;
+  }
+  /* Header */
+.img_topo {
+    height: 130px;
+    width: auto;
+    border-radius: 10px;
+}
+      
+
+  .site-header {
+    background-color: #171b5f;
+    color: #c8fe08;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .site-header h1 {
+    margin-bottom: 10px;
+  }
+  
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .nav-menu a {
+    color: #c8fe08;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .nav-menu a:hover {
+    text-decoration: underline;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #171b5f;
+    color: #333;
+  }
+  
